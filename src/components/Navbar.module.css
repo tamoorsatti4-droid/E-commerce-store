@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.langBtn {
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--foreground);
+}
+
+.langBtn:hover {
+  background: var(--bg-secondary);
+}
+
+.cartLink, .adminLink {
+  font-weight: 500;
+}
