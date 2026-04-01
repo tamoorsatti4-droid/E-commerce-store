@@ -13,6 +13,7 @@ interface CartContextType {
   items: CartItem[];
   addToCart: (item: CartItem) => void;
   removeFromCart: (productId: number) => void;
+  updateQuantity: (productId: number, delta: number) => void;
   clearCart: () => void;
   lang: "en" | "ur";
   toggleLang: () => void;
@@ -57,6 +58,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setItems((prev) => prev.filter((i) => i.productId !== productId));
   };
 
+  const updateQuantity = (productId: number, delta: number) => {
+    setItems((prev) =>
+      prev
+        .map((i) =>
+          i.productId === productId
+            ? { ...i, quantity: i.quantity + delta }
+            : i
+        )
+        .filter((i) => i.quantity > 0)
+    );
+  };
+
   const clearCart = () => setItems([]);
 
   const toggleLang = () => {
@@ -65,7 +78,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <CartContext.Provider
-      value={{ items, addToCart, removeFromCart, clearCart, lang, toggleLang }}
+      value={{ items, addToCart, removeFromCart, updateQuantity, clearCart, lang, toggleLang }}
     >
       {children}
     </CartContext.Provider>
