@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jameel+Noori+Nastaleeq&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap');
 
 :root {
   --background: #ffffff;
@@ -40,6 +40,6 @@ a {
 }
 
 /* RTL and Urdu support */
-html[dir="rtl"] {
-  font-family: 'Jameel Noori Nastaleeq', 'Inter', sans-serif;
+html[dir="rtl"], .urdu-font {
+  font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Inter', sans-serif;
 }
