@@ -163,6 +163,7 @@ export default function AdminDashboard() {
               <MoreHorizontal size={20} color="#64748b" />
             </div>
             <div className={styles.productItem}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=200&auto=format&fit=crop" alt="Shoes" className={styles.productImg} />
               <div className={styles.productInfo}>
                 <div className={styles.productName}>
@@ -180,6 +181,7 @@ export default function AdminDashboard() {
             </div>
             
             <div className={styles.productItem} style={{ marginBottom: '1.5rem' }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=200&auto=format&fit=crop" alt="Laptop" className={styles.productImg} />
               <div className={styles.productInfo}>
                 <div className={styles.progressHeader}>
@@ -193,6 +195,7 @@ export default function AdminDashboard() {
             </div>
 
             <div className={styles.productItem}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=200&auto=format&fit=crop" alt="Headphones" className={styles.productImg} />
               <div className={styles.productInfo}>
                 <div className={styles.progressHeader}>

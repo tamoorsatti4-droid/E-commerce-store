@@ -75,6 +75,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             </button>
             <div className={styles.profile}>
               <div className={styles.avatar}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="https://i.pravatar.cc/150?img=11" alt="Admin" />
               </div>
               <div className={styles.profileInfo}>
