@@ -1,0 +1,153 @@
+.main {
+  padding-top: 100px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.header {
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.titleArea h1 {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--foreground);
+  margin-bottom: 8px;
+}
+
+.titleArea p {
+  color: var(--secondary);
+  font-size: 16px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.filtersWrapper {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.filtersWrapper::-webkit-scrollbar {
+  height: 4px;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--secondary);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.activeFilter {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+  box-shadow: 0 4px 12px rgba(0, 98, 255, 0.2);
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--background);
+  border: 1px solid var(--card-border);
+  padding: 8px 16px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.searchBar input {
+  border: none;
+  background: transparent;
+  color: var(--foreground);
+  width: 100%;
+  outline: none;
+}
+
+.sortDropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--background);
+  border: 1px solid var(--card-border);
+  padding: 8px 16px;
+  border-radius: 12px;
+  min-width: 200px;
+}
+
+.sortIcon {
+  position: absolute;
+  right: 12px;
+  pointer-events: none;
+  color: var(--secondary);
+}
+
+.select {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--foreground);
+  width: 100%;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 80px;
+}
+
+.noResults {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.noResults h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.noResults p {
+  color: var(--secondary);
+}
+
+@media (max-width: 1024px) {
+  .controls {
+      flex-direction: column;
+      align-items: stretch;
+  }
+  .searchBar {
+      min-width: 100%;
+  }
+}

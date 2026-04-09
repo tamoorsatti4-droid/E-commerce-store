@@ -1,0 +1,194 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+.reportBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.reportBtn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Stats Cards */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.statCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+}
+
+.statIcon {
+  width: 56px;
+  height: 56px;
+  background: rgba(0, 98, 255, 0.05);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 800;
+  margin-top: 4px;
+}
+
+.statValueArea {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.statChange {
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.up { color: var(--success); }
+.down { color: var(--error); }
+
+/* Main Grid */
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.chartCard {
+  padding: 0 !important;
+}
+
+.viewAll {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Table Card */
+.tableCard {
+  padding: 0 !important;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 16px 32px;
+  font-size: 13px;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table td {
+  padding: 20px 32px;
+  border-top: 1px solid var(--card-border);
+}
+
+.orderId {
+  font-weight: 700;
+}
+
+.customerName {
+  font-weight: 500;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.paid { background: rgba(34, 197, 94, 0.1); color: var(--success); }
+.pending { background: rgba(245, 158, 11, 0.1); color: var(--warning); }
+.processing { background: rgba(59, 130, 246, 0.1); color: var(--primary); }
+.delivered { background: rgba(34, 197, 94, 0.2); color: var(--success); }
+.rejected { background: rgba(239, 68, 68, 0.1); color: var(--error); }
+
+.price {
+  font-weight: 700;
+}
+
+.manageBtn {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.footer {
+  margin-top: 60px;
+  padding-top: 32px;
+  border-top: 1px solid var(--card-border);
+  text-align: center;
+  color: var(--secondary);
+  font-size: 14px;
+}
+
+@media (max-width: 1200px) {
+  .mainGrid {
+      grid-template-columns: 1fr;
+  }
+}

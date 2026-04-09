@@ -1,0 +1,195 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: var(--transition);
+  padding: 0 24px;
+}
+
+.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  height: 70px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.logoIcon {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-size: 24px;
+  box-shadow: 0 8px 16px rgba(0, 98, 255, 0.2);
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  font-weight: 500;
+  color: var(--foreground);
+  opacity: 0.8;
+}
+
+.link:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  color: var(--secondary);
+}
+
+.searchInput {
+  padding: 10px 12px 10px 40px;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  width: 250px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+  width: 300px;
+  box-shadow: 0 0 0 4px rgba(0, 98, 255, 0.1);
+}
+
+.cartBtn {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--foreground);
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--error);
+  color: white;
+  font-size: 11px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+}
+
+.userMenu {
+  display: flex;
+  gap: 8px;
+}
+
+.adminLink, .logoutBtn {
+  width: 44px;
+  height: 44px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--foreground);
+}
+
+.mobMenuBtn {
+  display: none;
+}
+
+/* Mobile Menu */
+.mobMenu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  transition: height 0.4s ease;
+  z-index: 999;
+}
+
+.mobMenuOpen {
+  height: calc(100vh - 80px);
+}
+
+.mobLinks {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 24px;
+}
+
+.mobLinks a, .mobLinks button {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+@media (max-width: 1024px) {
+  .links, .searchBox {
+      display: none;
+  }
+  .mobMenuBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--foreground);
+  }
+}
